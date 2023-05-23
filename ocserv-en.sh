@@ -79,7 +79,7 @@ Download_ocserv(){
     
     if [[ -e ${file} ]]; then
         mkdir "${conf_file}"
-        wget --no-check-certificate -N -P "${conf_file}" "https://raw.githubusercontent.com/avashbaban/ocserv/main/ocserv.conf?token=GHSAT0AAAAAACC7XILGJ4HNBG7STQAQH73WZDMRHIQ"
+        wget --no-check-certificate -N -P "${conf_file}" "https://raw.githubusercontent.com/avashbaban/ocserv/main/ocserv.conf"
         [[ ! -s "${conf}" ]] && echo -e "${Error} ocserv config download failed!" && rm -rf "${conf_file}" && exit 1
     else
         echo -e "${Error} ocserv compiled failed!" && exit 1
