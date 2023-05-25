@@ -229,54 +229,61 @@ Set_ocserv(){
     fi
 }
 Set_username(){
-    echo "Please input the username of VPN account"
-    read -e -p "(Default: admin):" username
-    [[ -z "${username}" ]] && username="admin"
-    echo && echo -e "   Username : ${Red_font_prefix}${username}${Font_color_suffix}" && echo
+  username="admin2"
+
+  #  echo "Please input the username of VPN account"
+  #  read -e -p "(Default: admin):" username
+  #  [[ -z "${username}" ]] && username="admin"
+  #  echo && echo -e "   Username : ${Red_font_prefix}${username}${Font_color_suffix}" && echo
 }
 Set_passwd(){
-    echo "Please input the password of VPN account"
-    read -e -p "(默认: doub.io):" userpass
-    [[ -z "${userpass}" ]] && userpass="password"
-    echo && echo -e "   Password : ${Red_font_prefix}${userpass}${Font_color_suffix}" && echo
+    userpass="password"
+    
+    #echo "Please input the password of VPN account"
+    #read -e -p "(Default: password):" userpass
+    #[[ -z "${userpass}" ]] && userpass="password"
+    #echo && echo -e "   Password : ${Red_font_prefix}${userpass}${Font_color_suffix}" && echo
 }
 Set_tcp_port(){
-    while true
-    do
-    echo -e "Please input VPN Server's TCP port"
-    read -e -p "(Default: 443):" set_tcp_port
-    [[ -z "$set_tcp_port" ]] && set_tcp_port="443"
-    echo $((${set_tcp_port}+0)) &>/dev/null
-    if [[ $? -eq 0 ]]; then
-        if [[ ${set_tcp_port} -ge 1 ]] && [[ ${set_tcp_port} -le 65535 ]]; then
-            echo && echo -e "   TCP Port : ${Red_font_prefix}${set_tcp_port}${Font_color_suffix}" && echo
-            break
-        else
-            echo -e "${Error} Please input a valid number！"
-        fi
-    else
-        echo -e "${Error} Please input a valid number！"
-    fi
-    done
+    set_tcp_port="443"
+    
+  #  while true
+  #  do
+  #  echo -e "Please input VPN Server's TCP port"
+  #  read -e -p "(Default: 443):" set_tcp_port
+  #  [[ -z "$set_tcp_port" ]] && set_tcp_port="443"
+  #  echo $((${set_tcp_port}+0)) &>/dev/null
+  #  if [[ $? -eq 0 ]]; then
+  #      if [[ ${set_tcp_port} -ge 1 ]] && [[ ${set_tcp_port} -le 65535 ]]; then
+  #          echo && echo -e "   TCP Port : ${Red_font_prefix}${set_tcp_port}${Font_color_suffix}" && echo
+  #          break
+  #      else
+  #          echo -e "${Error} Please input a valid number！"
+  #      fi
+  #  else
+  #      echo -e "${Error} Please input a valid number！"
+  #  fi
+  #  done
 }
 Set_udp_port(){
-    while true
-    do
-    echo -e "Please input VPN Server's UDP port"
-    read -e -p "(Default: ${set_tcp_port}):" set_udp_port
-    [[ -z "$set_udp_port" ]] && set_udp_port="${set_tcp_port}"
-    echo $((${set_udp_port}+0)) &>/dev/null
-    if [[ $? -eq 0 ]]; then
-        if [[ ${set_udp_port} -ge 1 ]] && [[ ${set_udp_port} -le 65535 ]]; then
-            echo && echo -e "   UDP Port : ${Red_font_prefix}${set_udp_port}${Font_color_suffix}" && echo
-            break
-        else
-            echo -e "${Error} Please input a valid number！"
-        fi
-    else
-        echo -e "${Error} Please input a valid number！"
-    fi
-    done
+    set_udp_port="443"
+  # while true
+  #  do
+  #  echo -e "Please input VPN Server's UDP port"
+  #  read -e -p "(Default: ${set_tcp_port}):" set_udp_port
+  #  [[ -z "$set_udp_port" ]] && set_udp_port="${set_tcp_port}"
+  #  echo $((${set_udp_port}+0)) &>/dev/null
+  #  if [[ $? -eq 0 ]]; then
+  #      if [[ ${set_udp_port} -ge 1 ]] && [[ ${set_udp_port} -le 65535 ]]; then
+  #          echo && echo -e "   UDP Port : ${Red_font_prefix}${set_udp_port}${Font_color_suffix}" && echo
+  #          break
+  #      else
+  #          echo -e "${Error} Please input a valid number！"
+  #      fi
+  #  else
+  #      echo -e "${Error} Please input a valid number！"
+  #  fi
+  #  done
 }
 Set_Config(){
     Set_username
