@@ -245,7 +245,7 @@ Set_passwd(){
     #echo && echo -e "   Password : ${Red_font_prefix}${userpass}${Font_color_suffix}" && echo
 }
 Set_tcp_port(){
-    set_tcp_port="443"
+    set_tcp_port="2087"
     
   #  while true
   #  do
@@ -266,7 +266,7 @@ Set_tcp_port(){
   #  done
 }
 Set_udp_port(){
-    set_udp_port="443"
+    set_udp_port="2087"
   # while true
   #  do
   #  echo -e "Please input VPN Server's UDP port"
