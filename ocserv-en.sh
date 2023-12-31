@@ -8,7 +8,7 @@ conf_file="/etc/ocserv"
 conf="/etc/ocserv/ocserv.conf"
 passwd_file="/etc/ocserv/ocpasswd"
 log_file="/tmp/ocserv.log"
-ocserv_ver="1.1.6"
+ocserv_ver="1.2.3"
 PID_FILE="/var/run/ocserv.pid"
 
 Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m"
@@ -229,7 +229,7 @@ Set_ocserv(){
     fi
 }
 Set_username(){
-  username="admin2"
+  username="test"
 
   #  echo "Please input the username of VPN account"
   #  read -e -p "(Default: admin):" username
@@ -237,7 +237,7 @@ Set_username(){
   #  echo && echo -e "   Username : ${Red_font_prefix}${username}${Font_color_suffix}" && echo
 }
 Set_passwd(){
-    userpass="password"
+    userpass="test"
     
     #echo "Please input the password of VPN account"
     #read -e -p "(Default: password):" userpass
